@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+      console.log(true || false); // true
+      console.log(true || true); // true
+      console.log("string" || true); // string
+      console.log(true || ""); // true
+      console.log(true || "string"); // true
+      console.log(false || ""); // ""
+      console.log(false || "string"); // "string"
+      console.log(5 || 0); // 5
+      console.log(5 || -6); // 5
+      console.log(5 || false); // 5
+      console.log(null || 0); // 0
+      console.log(null || ""); // ""
+      console.log(null || false); // false
+      console.log("yes" || "no"); // "yes"
+    </script>
+</head>
+<body>
+</body>
+</html>
