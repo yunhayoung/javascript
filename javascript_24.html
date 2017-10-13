@@ -2,6 +2,15 @@
 <html>
 <head>
     <script type="text/javascript">
+console.log = function(msg) {
+        var ul = document.getElementById("log");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        ul.appendChild(li);
+    }
+
+    window.onload = function() {
+        document.getElementById("run").onclick = function() {
       var a = Number("1000");
       var b = Number("3.14");
       var c = Number("");
@@ -10,6 +19,8 @@
       console.log(typeof(b) + " : " + b); // number : 3.14
       console.log(typeof(c) + " : " + c); // number : 0
       console.log(typeof(d) + " : " + d); // number : NaN
+}
+}
     </script>
 </head>
 <body>
