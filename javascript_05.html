@@ -2,10 +2,21 @@
 <html>
 <head>
     <script type="text/javascript">
+console.log = function(msg) {
+        var ul = document.getElementById("log");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        ul.appendChild(li);
+    }
+
+    window.onload = function() {
+        document.getElementById("run").onclick = function() {
     var a = "자바스크립트";
     var b = "프로그래밍";
     var sum = a + b;
     console.log(sum);
+}
+}
     </script>
 </head>
 <body>

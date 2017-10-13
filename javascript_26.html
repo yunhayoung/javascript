@@ -2,6 +2,15 @@
 <html>
 <head>
     <script type="text/javascript">
+console.log = function(msg) {
+        var ul = document.getElementById("log");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        ul.appendChild(li);
+    }
+
+    window.onload = function() {
+        document.getElementById("run").onclick = function() {
       var a = parseFloat("10");
       var b = parseFloat("10.3");
       var c = parseFloat("10 20 30");
@@ -11,7 +20,9 @@
       console.log(typeof(b) + " : " + b); // number : 10.3
       console.log(typeof(c) + " : " + c); // number : 10
       console.log(typeof(d) + " : " + d); // number : 10
-      console.log(typeof(e) + " : " + e); // number : NaN          
+      console.log(typeof(e) + " : " + e); // number : NaN     
+}
+}     
     </script>
 </head>
 <body>

@@ -2,6 +2,15 @@
 <html>
 <head>
     <script type="text/javascript">
+console.log = function(msg) {
+        var ul = document.getElementById("log");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        ul.appendChild(li);
+    }
+
+    window.onload = function() {
+        document.getElementById("run").onclick = function() {
       var x = 9.656;
       var a = x.toPrecision();
       var b = x.toPrecision(2);
@@ -11,6 +20,8 @@
       console.log(typeof(b) + " : " + b); // string : 9.7
       console.log(typeof(c) + " : " + c); // string : 9.656
       console.log(typeof(d) + " : " + d); // string : 9.65600
+}
+}
     </script>
 </head>
 <body>

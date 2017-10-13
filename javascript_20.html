@@ -2,6 +2,15 @@
 <html>
 <head>
     <script type="text/javascript">
+console.log = function(msg) {
+        var ul = document.getElementById("log");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        ul.appendChild(li);
+    }
+
+    window.onload = function() {
+        document.getElementById("run").onclick = function() {
       var x = 10;
       var a = x.toString();
       var b = (123).toString();
@@ -9,6 +18,8 @@
       console.log(typeof(a) + " : " + a); // string : 10
       console.log(typeof(b) + " : " + b); // string : 123
       console.log(typeof(c) + " : " + c); // string : 123
+}
+}
     </script>
 </head>
 <body>

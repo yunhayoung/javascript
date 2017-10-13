@@ -2,6 +2,15 @@
 <html>
 <head>
     <script type="text/javascript">
+console.log = function(msg) {
+        var ul = document.getElementById("log");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        ul.appendChild(li);
+    }
+
+    window.onload = function() {
+        document.getElementById("run").onclick = function() {
       var greeting;
       var time = 12;
 
@@ -13,6 +22,8 @@
           greeting = "Good evening";
       }
       console.log(greeting);
+}
+}
     </script>
 </head>
 <body>

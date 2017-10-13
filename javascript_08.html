@@ -2,6 +2,15 @@
 <html>
 <head>
     <script type="text/javascript">
+console.log = function(msg) {
+        var ul = document.getElementById("log");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        ul.appendChild(li);
+    }
+
+    window.onload = function() {
+        document.getElementById("run").onclick = function() {
       console.log(true && false); // false
       console.log(true && true); // true
       console.log("string" && true); // true
@@ -16,6 +25,8 @@
       console.log(null && ""); // null
       console.log(null && false); // null
       console.log("yes" && "no"); // "no"
+}
+}
     </script>
 </head>
 <body>
